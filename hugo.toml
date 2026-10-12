@@ -1,5 +1,5 @@
-title = "TITLE OF CONFERENCE"
-baseURL = "https://lizziemickiewicz.github.io/" #CHANGE URL
+title = "Ecological validity in the cognitive neuroscience of language learning and processing: Promising approaches and future directions (EcoNeuroSLA)"
+baseURL = "https://roundtable2027.github.io/roundtable2027/" #CHANGE URL
 theme = "researcher"
 enableEmoji = true
 
@@ -7,16 +7,17 @@ math = false          # enable KaTeX (https://katex.org/) globally
 googleAnalytics = ""  # add your tracking id
 
 [params]
+  subtitle = "2027 Language Learning Cognitive Neuroscience Series Roundtable Conference"
   author = "roundtable2027" #CHANGE AUTHOR
   description = "roundtable2027"
   favicon = "" #CHANGE ICON
   logo = ""  # url or path to a logo to put in the header
   [params.footer]
     text = "made with © SOMEONE"
-    url = "https://github.com/lizziemickiewicz/lizziemickiewicz.github.io/" #CHANGE URL
+    url = "https://roundtable2027.github.io/roundtable2027/" #CHANGE URL
   [params.style]
-    fontFamily = "sans-serif"
-    pageWidth = "1200px"
+    fontFamily = "verdana"
+    pageWidth = "100%"
     avatarSize = "185px"
     colorBlack = "white"
     colorRed = "#afdcff"
@@ -33,18 +34,27 @@ googleAnalytics = ""  # add your tracking id
     name = "HOME"
     url = "/"
     weight = 1
+  [[menu.main]]
+    name = "CALL FOR PAPERS"
+    url = "/call"
+    weight = 2
+  [[menu.main]]
+    name = "REGISTRATION"
+    url = "/registration"
+    weight = 3
 [[menu.main]]
     name = "KEYNOTE SPEAKERS"
     url = "/keynotespeakers"
-    weight = 2
+    weight = 4
 [[menu.main]]
     name = "PROGRAM"
     url = "/program"
-    weight = 3
+    weight = 5
   [[menu.main]]
     name = "TRAVEL"
     url = "/travel"
-    weight = 4
+    weight = 6
+
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown files
