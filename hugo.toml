@@ -7,7 +7,7 @@ math = false          # enable KaTeX (https://katex.org/) globally
 googleAnalytics = ""  # add your tracking id
 
 [params]
-  subtitle = "2027 Language Learning Cognitive Neuroscience Series Roundtable Conference"
+  subtitle = "2027 *Language Learning Cognitive Neuroscience Series* Roundtable Conference"
   author = "roundtable2027" #CHANGE AUTHOR
   description = "roundtable2027"
   favicon = "" #CHANGE ICON

@@ -59,9 +59,10 @@ $y-medium: 1.0rem;
 }
 .nav-link {
     @extend %link-default;
-    font-size: 14px;
+    font-size: 18px;
     padding-left: 0.0rem !important;
     padding-right: 0.0rem !important;
+    align-items: center
 }
 #content {
     a {
@@ -165,6 +166,14 @@ $y-medium: 1.0rem;
     }
 }
 
+#content .keynoteImages img {
+    margin: 0;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+}
+
 #content .keynoteImages {
     float: left;
     margin: 0 1.5rem 1rem 0;
@@ -184,4 +193,20 @@ $y-medium: 1.0rem;
         float: none;
         margin: 0 0 1rem 0;
     }
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap: 0rem;
+    align-items: end;
+}
+@media screen and (max-width: 600px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+em, strong {
+    font-size: inherit;
 }

@@ -1,28 +1,21 @@
 <div class="container mt-5">
-    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-        <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-            <div>
-                <a class="navbar-brand mx-0 mr-sm-auto" href="{{ .Site.BaseURL }}" style="display:block; white-space:normal; font-size:1.5rem">
-                    {{ with .Site.Params.logo }}
-                        <img src="{{ . | absURL }}" alt="logo">
-                    {{ end }}
-                    {{ .Site.Title }}
+    <nav class="navbar navbar-expand-sm flex-column text-nowrap p-0" style="align-items:flex-start; gap:1rem;">
+        <div class="navbar-nav flex-row flex-wrap" style="width:100%; justify-content:space-between; padding-left:5px; padding-right:5px">
+            {{ range .Site.Menus.main }}
+                <a class="nav-item nav-link" href="{{ .URL | relURL }}" title="{{ .Name }}">
+                    {{ .Pre }}{{ .Name }}{{ .Post }}
                 </a>
-                {{ with .Site.Params.subtitle }}
-                    <div style="font-size:16px; color:#fff;">{{ . }}</div>
+            {{ end }}
+        </div>
+        <div>
+            <a class="navbar-brand mx-0" href="{{ .Site.BaseURL }}" style="display:block; white-space:normal; font-size:1.7rem; font-weight:bold">
+                {{ with .Site.Params.logo }}
+                    <img src="{{ . | absURL }}" alt="logo">
                 {{ end }}
-            </div>
-        <div class="navbar-nav flex-row flex-wrap justify-content-center">
-            {{ with .Site.Menus.main }}
-                {{ $navbar_len := len . }}
-                {{ range $i, $nav_item := . }}
-                    <a class="nav-item nav-link" href="{{ $nav_item.URL }}" title="{{ $nav_item.Name }}">
-                        {{ $nav_item.Pre }}{{ $nav_item.Name }}{{ $nav_item.Post }}
-                    </a>
-                    {{ if ne (add $i 1) $navbar_len }}
-                        <span class="nav-item navbar-text mx-1">/</span>
-                    {{ end }}
-                {{ end }}
+                {{ .Site.Title }}
+            </a>
+            {{ with .Site.Params.subtitle }}
+                <div style="font-size:20px; color:#fff;">{{ . | markdownify }}</div>
             {{ end }}
         </div>
     </nav>
